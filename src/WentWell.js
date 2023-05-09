@@ -1,13 +1,13 @@
 import React from "react";
-import "./ActionItems.css";
-import Likes from "./Likes";
-import Comentario from "./Comentario"
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import ColorPicker from "./ColorPicker";
+import "./WentWell.css";
+import Likes from "./Likes";
+import Comentario from "./Comentario";
 import editar from "./imagenes/edit-button.svg";
 import borrar from "./imagenes/Delete-Button-PNG-HD-Image.png";
 import { ReviewProvider } from "./ReviewContext";
-export default class ActionItems extends React.Component {
+export default class WentWell extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -77,7 +77,7 @@ export default class ActionItems extends React.Component {
           <h3>
             {" "}
             {" "}
-            Action Items:
+            Went well:
           </h3>
           <form onSubmit={this.agregarComentario}>
             <input

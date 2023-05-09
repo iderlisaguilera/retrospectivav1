@@ -62,7 +62,7 @@ export default class Comments extends React.Component {
             {this.state.lista.map((item) => {
               return (
                 <li id="lista">
-                  {item.descripcion} <button id="boton">Comentar</button>
+                  {item.descripcion}
                 </li>
               );
             })}

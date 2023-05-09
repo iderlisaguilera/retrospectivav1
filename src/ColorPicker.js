@@ -29,7 +29,8 @@ class ColorPicker extends React.Component {
     onChange = (color) => {
       this.setState({ 
         color:color.rgb
-      })
+      });
+      this.props.onChange(color);
     };
  
     render() {
@@ -37,9 +38,9 @@ class ColorPicker extends React.Component {
       const styles = reactCSS({
         'default': {
           color: {
-            width: '40px',
-            height: '15px',
-            borderRadius: '3px',
+            width: '20px',
+            height: '20px',
+            borderRadius: '2px',
             background: `rgba(${ this.state.color.r }, ${ this.state.color.g }, ${ this.state.color.b }, ${ this.state.color.a })`,
           },
           popover: {
@@ -54,8 +55,7 @@ class ColorPicker extends React.Component {
             left: '0px',
           },
           swatch: {
-            padding: '6px',
-            background: '#ffffff',
+            color: 'black',
             borderRadius: '2px',
             cursor: 'pointer',
             display: 'inline-block',
