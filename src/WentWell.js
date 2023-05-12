@@ -74,7 +74,7 @@ export default class WentWell extends React.Component {
               color={this.state.backgroundColor}
               onChange={this.handleChangeComplete}
             /></p>
-          <h3>
+          <h3 className ="went-well">
             {" "}
             {" "}
             Went well:
@@ -94,7 +94,7 @@ export default class WentWell extends React.Component {
           <ul id="lista-comentario" >
             {this.state.lista.map((item, index) => {
               return (
-                <li key={index} style={{ backgroundColor: `rgba(${this.state.backgroundColor.r}, ${this.state.backgroundColor.g}, ${this.state.backgroundColor.b}, ${this.state.backgroundColor.a})` }}>
+                <li className="li" key={index} style={{ backgroundColor: `rgba(${this.state.backgroundColor.r}, ${this.state.backgroundColor.g}, ${this.state.backgroundColor.b}, ${this.state.backgroundColor.a})` }}>
                   {this.state.editIndex === index ? (
                     <form onSubmit={this.actualizarComentario}>
                       <input
@@ -107,10 +107,10 @@ export default class WentWell extends React.Component {
                   ) : (
                     <>
                       <span>{item.descripcion}</span>
-                      <button style={{ backgroundColor: `rgba(${this.state.backgroundColor.r}, ${this.state.backgroundColor.g}, ${this.state.backgroundColor.b}, ${this.state.backgroundColor.a})` }} onClick={() => this.editarComentario(index, item.descripcion)}>
+                      <button style={{ borderRadius: `4px`, backgroundColor: `rgba(${this.state.backgroundColor.r}, ${this.state.backgroundColor.g}, ${this.state.backgroundColor.b}, ${this.state.backgroundColor.a})` }} onClick={() => this.editarComentario(index, item.descripcion)}>
                         <img src={editar} alt="" style={{width:`15px`, height: `15px`}} />
                       </button>
-                      <button onClick={() => this.eliminarComentario(index)} style={{ backgroundColor: `rgba(${this.state.backgroundColor.r}, ${this.state.backgroundColor.g}, ${this.state.backgroundColor.b}, ${this.state.backgroundColor.a})` }}><img src={borrar} alt="" style={{width:`15px`, height: `15px`}}/></button>
+                      <button onClick={() => this.eliminarComentario(index)} style={{ borderRadius: `4px`, backgroundColor: `rgba(${this.state.backgroundColor.r}, ${this.state.backgroundColor.g}, ${this.state.backgroundColor.b}, ${this.state.backgroundColor.a})` }}><img src={borrar} alt="" style={{width:`15px`, height: `15px`}}/></button>
                   <Likes backgroundColor={this.state.backgroundColor}/>
                   <Comentario  backgroundColor={this.state.backgroundColor}/>
                   </>

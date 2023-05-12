@@ -2,3 +2,9 @@
     height: 15px;
     width: 15px;
 }
+#lista {
+    border-color: black;
+}
+#comentar {
+        border-radius: 4px;
+}
